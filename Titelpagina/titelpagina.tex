@@ -1,0 +1,70 @@
+%Dit is een standalone TeX. Deze kan compiled worden als main.tex een andere preamble heeft als dit bestand
+
+\documentclass[10pt,a4paper,oneside]{report}
+\usepackage[utf8]{inputenc} %Codering
+\usepackage[dutch]{babel} %Taalinstelling
+\usepackage{biblatex} %Om een of andere reden wil deze TeX niet compilen zonder deze package, niet nodig
+\usepackage{csquotes} %Deze is ook nodig om errors tegen te gaan, hoewel hij zelf niet nodig is
+
+\usepackage{graphicx}
+\graphicspath{ {../Images/} }
+
+\usepackage[linktoc=all]{hyperref}
+\hypersetup{colorlinks=false} %Links naar websites, bronnen, inhoudsopgave, pagina's etc.
+
+\usepackage{titling} %Titels voor op de titelpagina
+\usepackage{changepage} %Horizontale marges tijdelijk veranderen op de titelpagina
+\input{../Titelpagina/Definities.tex}
+
+\title{\titel}
+\author{\auteur}
+\date{\datum}
+%EIND VAN PREAMBLE
+
+
+\begin{document}
+\begin{titlepage}
+    \begin{adjustwidth*}{-2cm}{-2cm}
+    \vspace*{-3.5cm}
+    \hspace{12cm}
+    \includegraphics[width=0.4\textwidth]{download} \\
+    \begin{center}
+    \vspace*{3cm}
+    {\Huge\thetitle}
+    
+    \vspace*{0.4cm}
+    \textnormal{\ondertitel}
+    
+    \vspace{5cm}
+    \textbf{Door} \\
+    \theauthor \\
+    \studentklas \\
+    \mailstudent \\
+    \telstudent \\
+    
+    \vspace{0.7cm}
+    \textbf{Onderwijsinstituut} \\
+    \school \\
+    \domein \\
+    \mailschool \\
+    
+    \vspace{0.7cm}
+    \textbf{Organisatie} \\
+    \organisatie \\
+    \mailorganisatie \\
+    \telorganisatie \\
+
+    \vspace{0.7cm}
+    Afstudeerdocent: \docent \\
+    1\textsuperscript{e} Afstudeerbegeleider: \begeleidereen \\
+    2\textsuperscript{e} Afstudeerbegeleider: \begeleidertwee \\
+
+    \vspace{0.7cm}
+    \textbf{Datum} \\
+    \thedate
+    \end{center}
+    \end{adjustwidth*}
+\end{titlepage}
+%Titelpagina
+
+\end{document}
